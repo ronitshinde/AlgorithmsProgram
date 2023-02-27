@@ -10,7 +10,6 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            InsertionSort insertion = new InsertionSort();
             Console.WriteLine("Select The Option");
             Console.WriteLine("1.Insertion Sort");
             Console.WriteLine();
@@ -18,6 +17,7 @@ namespace Algorithms
             switch (option)
             {
                 case 1:
+                    InsertionSort insertion = new InsertionSort();
                     insertion.DisplayInsertionSort();
                     Console.ReadKey();
                     break;
