@@ -14,7 +14,7 @@ namespace Algorithms
             while (flag)
             {
                 Console.WriteLine("Select The Option");
-                Console.WriteLine("1.Insertion Sort \n2.Bubble Sort");
+                Console.WriteLine("1.Insertion Sort \n2.Bubble Sort \n3.Merge Sort");
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
                 switch (option)
@@ -26,10 +26,15 @@ namespace Algorithms
                     case 2:
                         BubbleSort bubble = new BubbleSort();
                         bubble.DisplayBubbleSort();
-                        Console.ReadKey();
                         break;
                     case 3:
+                        MergeAndSort merge = new MergeAndSort();
+                        merge.SortMerge();
+                        Console.WriteLine();
+                        break;
+                    case 4:
                         flag = false;
+                        Console.ReadKey();
                         break;
                 }
             }
