@@ -14,7 +14,7 @@ namespace Algorithms
             while (flag)
             {
                 Console.WriteLine("Select The Option");
-                Console.WriteLine("1.Insertion Sort \n2.Bubble Sort \n3.Merge Sort");
+                Console.WriteLine("1.Insertion Sort \n2.Bubble Sort \n3.Merge Sort \n4.Anagram Check \n5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
                 switch (option)
@@ -33,6 +33,10 @@ namespace Algorithms
                         Console.WriteLine();
                         break;
                     case 4:
+                        Anagram sort = new Anagram();
+                        sort.AnagramCheck("Heart", "Earth");
+                        break;
+                    case 5:
                         flag = false;
                         Console.ReadKey();
                         break;
