@@ -14,7 +14,7 @@ namespace Algorithms
             while (flag)
             {
                 Console.WriteLine("Select The Option");
-                Console.WriteLine("1.Insertion Sort \n2.Bubble Sort \n3.Merge Sort \n4.Anagram Check \n5.Exit");
+                Console.WriteLine("1.Insertion Sort \n2.Bubble Sort \n3.Merge Sort \n4.Anagram Check \n5.Prime Number \n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
                 switch (option)
@@ -37,6 +37,11 @@ namespace Algorithms
                         sort.AnagramCheck("Heart", "Earth");
                         break;
                     case 5:
+                        PrimeNumber prime = new PrimeNumber();
+                        prime.PrimeCheck(0, 1000);
+                        Console.WriteLine();
+                        break;
+                    case 6:
                         flag = false;
                         Console.ReadKey();
                         break;
