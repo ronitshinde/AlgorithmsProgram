@@ -10,17 +10,28 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Select The Option");
-            Console.WriteLine("1.Insertion Sort");
-            Console.WriteLine();
-            int option = Convert.ToInt32(Console.ReadLine());
-            switch (option)
+            bool flag = true;
+            while (flag)
             {
-                case 1:
-                    InsertionSort insertion = new InsertionSort();
-                    insertion.DisplayInsertionSort();
-                    Console.ReadKey();
-                    break;
+                Console.WriteLine("Select The Option");
+                Console.WriteLine("1.Insertion Sort \n2.Bubble Sort");
+                int option = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+                switch (option)
+                {
+                    case 1:
+                        InsertionSort insertion = new InsertionSort();
+                        insertion.DisplayInsertionSort();
+                        break;
+                    case 2:
+                        BubbleSort bubble = new BubbleSort();
+                        bubble.DisplayBubbleSort();
+                        Console.ReadKey();
+                        break;
+                    case 3:
+                        flag = false;
+                        break;
+                }
             }
         }
     }
